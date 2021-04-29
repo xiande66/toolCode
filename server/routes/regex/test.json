@@ -1,0 +1,307 @@
+[
+    {
+        "title": "菜单查询",
+        "address": "../menu/selectByName",
+        "type": "get"
+    },
+    {
+        "title": "菜单查询",
+        "address": "../menu/selectById",
+        "type": "get"
+    },
+    {
+        "title": "菜单新增",
+        "address": "../new/create",
+        "type": "post"
+    },
+    {
+        "title": "菜单更新",
+        "address": "../menu/update",
+        "type": "post"
+    },
+    {
+        "title": "菜单删除",
+        "address": "../menu/delete",
+        "type": "post"
+    },
+    {
+        "title": "菜单顺序修改",
+        "address": "../menu/updateOrder",
+        "type": "post"
+    },
+    {
+        "title": "用户查询",
+        "address": "../user/select",
+        "type": "get"
+    },
+    {
+        "title": "用户查询",
+        "address": "../user/selectById",
+        "type": "get"
+    },
+    {
+        "title": "用户新增",
+        "address": "../user/create",
+        "type": "post"
+    },
+    {
+        "title": "用户更新",
+        "address": "../user/update",
+        "type": "post"
+    },
+    {
+        "title": "用户停用",
+        "address": "../user/delete",
+        "type": "post"
+    },
+    {
+        "title": "用户权限查询",
+        "address": "../user/selectAuthorityById",
+        "type": "get"
+    },
+    {
+        "title": "用户权限修改",
+        "address": "../user/updateAuthorityById",
+        "type": "post"
+    },
+    {
+        "title": "用户信息导出",
+        "address": "../user/userInfoExport",
+        "type": "post"
+    },
+    {
+        "title": "组织架构查询",
+        "address": "../user/selectOrganization",
+        "type": "get"
+    },
+    {
+        "title": "组织架构查询",
+        "address": "../user/selectOrganizationById",
+        "type": "get"
+    },
+    {
+        "title": "组织架构新增",
+        "address": "../user/createOrganization",
+        "type": "post"
+    },
+    {
+        "title": "组织架构修改",
+        "address": "../user/updateOrganization",
+        "type": "post"
+    },
+    {
+        "title": "组织架构删除",
+        "address": "../user/deleteOrganization",
+        "type": "post"
+    },
+    {
+        "title": "职位查询",
+        "address": "../authority/selectPosition",
+        "type": "get"
+    },
+    {
+        "title": "职位查询",
+        "address": "../authority/selectPositionById",
+        "type": "get"
+    },
+    {
+        "title": "职位新增",
+        "address": "../authority/createPosition",
+        "type": "post"
+    },
+    {
+        "title": "职位更新",
+        "address": "../authority/updatePosition",
+        "type": "post"
+    },
+    {
+        "title": "职位删除",
+        "address": "../authority/deletePosition",
+        "type": "post"
+    },
+    {
+        "title": "职位关联角色查询",
+        "address": "../authority/selectRoleByPosition",
+        "type": "get"
+    },
+    {
+        "title": "职位关联角色修改",
+        "address": "../authority/updateRoleByPosition",
+        "type": "post"
+    },
+    {
+        "title": "职位信息导出",
+        "address": "../authority/positionInfoExport",
+        "type": "post"
+    },
+    {
+        "title": "角色查询",
+        "address": "../authority/selectRole",
+        "type": "get"
+    },
+    {
+        "title": "角色查询",
+        "address": "../authority/selectRoleById",
+        "type": "get"
+    },
+    {
+        "title": "角色新增",
+        "address": "../authority/createRole",
+        "type": "post"
+    },
+    {
+        "title": "角色修改",
+        "address": "../authority/updateRole",
+        "type": "post"
+    },
+    {
+        "title": "角色删除",
+        "address": "../authority/deleteRole",
+        "type": "post"
+    },
+    {
+        "title": "查看角色权限",
+        "address": "../authority/selectAuthorityByRoleId",
+        "type": "get"
+    },
+    {
+        "title": "编辑角色权限",
+        "address": "../authority/updateAuthorityByRoleId",
+        "type": "post"
+    },
+    {
+        "title": "角色导出",
+        "address": "../authority/roleInfoExport",
+        "type": "post"
+    },
+    {
+        "title": "功能查询",
+        "address": "../authority/selectFunction",
+        "type": "get"
+    },
+    {
+        "title": "功能查询",
+        "address": "../authority/selectFunctionById",
+        "type": "get"
+    },
+    {
+        "title": "功能新增",
+        "address": "../authority/createFunction",
+        "type": "post"
+    },
+    {
+        "title": "功能修改",
+        "address": "../authority/updateFunction",
+        "type": "post"
+    },
+    {
+        "title": "功能删除",
+        "address": "../authority/deleteFunction",
+        "type": "post"
+    },
+    {
+        "title": "查询参数(按条件)",
+        "address": "../param/selectParam",
+        "type": "get"
+    },
+    {
+        "title": "查询参数",
+        "address": "../param/selectParamById",
+        "type": "get"
+    },
+    {
+        "title": "新增参数",
+        "address": "../param/createParam",
+        "type": "post"
+    },
+    {
+        "title": "更新参数",
+        "address": "../param/updateParam",
+        "type": "post"
+    },
+    {
+        "title": "删除参数",
+        "address": "../param/deleteParam",
+        "type": "post"
+    },
+    {
+        "title": "查询参数选项",
+        "address": "../param/selectParamOption",
+        "type": "get"
+    },
+    {
+        "title": "查询选项信息",
+        "address": "../param/selectOption",
+        "type": "get"
+    },
+    {
+        "title": "新增参数选项",
+        "address": "../param/createParamOption",
+        "type": "post"
+    },
+    {
+        "title": "更新参数选项",
+        "address": "../param/updateParamOption",
+        "type": "post"
+    },
+    {
+        "title": "删除参数选项",
+        "address": "../param/deleteParamOption",
+        "type": "post"
+    },
+    {
+        "title": "查询公告(按条件)",
+        "address": "../notice/select",
+        "type": "get"
+    },
+    {
+        "title": "查询公告",
+        "address": "../notice/selectById",
+        "type": "get"
+    },
+    {
+        "title": "新增公告",
+        "address": "../notice/create",
+        "type": "post"
+    },
+    {
+        "title": "修改公告",
+        "address": "../notice/update",
+        "type": "post"
+    },
+    {
+        "title": "删除公告",
+        "address": "../notice/delete",
+        "type": "post"
+    },
+    {
+        "title": "系统日志查询功能",
+        "address": "../operateLog/select",
+        "type": "get"
+    },
+    {
+        "title": "系统日志导出功能",
+        "address": "../operateLog/export",
+        "type": "get"
+    },
+    {
+        "title": "权限日志查询功能",
+        "address": "../authorityLog/select",
+        "type": "get"
+    },
+    {
+        "title": "权限日志导出功能",
+        "address": "../authorityLog/export",
+        "type": "get"
+    },
+    {
+        "title": "登录日志查询功能",
+        "address": "../loginLog/select",
+        "type": "get"
+    },
+    {
+        "title": "登录日志导出功能",
+        "address": "../loginLog/export",
+        "type": "get"
+    }
+]

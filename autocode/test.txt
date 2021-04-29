@@ -1,0 +1,378 @@
+Router.route('/', function () {
+    $('.content').load('./template/temindex.html');
+});
+//规则查询
+Router.route('/Search_rules', function () {
+    $('.content').load('./template/Rule_Management/Search_rules/Search_rules.html');
+});
+//规则模板
+Router.route('/Rule_templates', function () {
+    $('.content').load('./template/Rule_Management/Rule_templates/Rule_templates.html');
+});
+//规则包
+Router.route('/rulebag', function () {
+    $('.content').load('./template/Rule_Management/View_rules/Rule_package.html');
+});
+//规则包-规则记录
+Router.route('/rule_recond', function () {
+    $('.content').load('./template/Rule_Management/View_rules/Rule_recond.html');
+});
+//规则包-包记录
+Router.route('/package_recond', function () {
+    $('.content').load('./template/Rule_Management/View_rules/Package_recond.html');
+});
+//规则列表
+Router.route('/View_rules', function () {
+    $('.content').load('./template/Rule_Management/View_rules/View_rules.html');
+});
+//新建规则-普通规则
+Router.route('/add_newRule', function () {
+    $('.content').load('./template/Rule_Management/View_rules/Add_new_rule.html');
+});
+//规则流
+Router.route('/rule_flow', function () {
+    $('.content').load('./template/Rule_Management/View_rules/Rule_flow.html');
+});
+//规则流-编辑
+Router.route('/edit_rule_flow', function () {
+    $('.content').load('./template/Rule_Management/View_rules/rule_flow/Rule_flow_edit.html');
+});
+//决策表
+Router.route('/decide_table', function () {
+    $('.content').load('./template/Rule_Management/View_rules/decide_table/decide_table.html');
+});
+//规则模型
+Router.route('/Rule_model', function () {
+    $('.content').load('./template/Rule_Modeling/Rule_model/Rule_model.html');
+});
+//新建模型
+Router.route('/add_Model', function () {
+    $('.content').load('./template/Rule_Modeling/Rule_model/Add_Rule_model.html');
+});
+//规则模型-包
+Router.route('/Rule_model_package', function () {
+    $('.content').load('./template/Rule_Modeling/Rule_model/Rule_model_package.html');
+});
+//规则模型-规则集参数
+Router.route('/rule_set_params', function () {
+    $('.content').load('./template/Rule_Modeling/Rule_set_parameters/Rule_set_params.html');
+});
+//菜单名称
+Router.route('/menuname', function () {
+    $('.content').load('./template/menuname.html');
+});
+//项目列表
+Router.route('/prolist', function () {
+    $('.content').load('./template/prolist.html');
+});
+//批任务管理
+Router.route('/batchManagement', function () {
+    $('.content').load('./template/batchManagement/batchManagement.html');
+});
+//批任务记录查询
+Router.route('/batchLogSearch', function () {
+    $('.content').load('./template/batchManagement/batchLogSearch.html');
+});
+//批任务详情
+Router.route('/batchDetail', function () {
+    $('.content').load('./template/batchManagement/batchDetail.html');
+});
+
+//系统管理
+//行员管理
+Router.route('/peopleg', function () {
+    $('.content').load('./template/sysmanage/peopleg.html');
+});
+//角色管理
+Router.route('/roleg', function () {
+    $('.content').load('./template/sysmanage/roleg.html');
+});
+//操作日志查询
+Router.route('/oplogquery', function () {
+    $('.content').load('./template/sysmanage/oplogquery.html');
+});
+
+//积分管理
+//部门积分查询
+Router.route('/deptbalancequery', function () {
+    $('.content').load('./template/reward/deptbalancequery.html');
+});
+//部门积分查询详细
+Router.route('/queryDeptDetail', function () {
+    $('.content').load('./template/reward/deptbalanceDetail.html');
+});
+//积分余额查询
+Router.route('/intebalancequery', function () {
+    $('.content').load('./template/reward/intebalancequery.html');
+});
+//积分余额有效期查询
+Router.route('/inteValidDate', function () {
+    $('.content').load('./template/reward/inteValidDate.html');
+});
+//积分余额查询明细
+Router.route('/intebalancequeryDetail', function () {
+    $('.content').load('./template/reward/intebalanceQueryDetail.html');
+});
+//积分冻结/解冻
+Router.route('/intefreeze', function () {
+    $('.content').load('./template/reward/intefreeze.html');
+});
+//积分冻结/解冻 操作信息
+Router.route('/intefreezeOperate', function () {
+    $('.content').load('./template/reward/intefreezeOperate.html');
+});
+//积分调整
+Router.route('/integover', function () {
+    $('.content').load('./template/reward/integover.html');
+});
+//积分调整 -调整信息
+Router.route('/integoverOperate', function () {
+    $('.content').load('./template/reward/integoverOperate.html');
+});
+//积分转赠
+Router.route('/intetransfer', function () {
+    $('.content').load('./template/reward/intetransfer.html');
+});
+//积分转赠-操作
+Router.route('/intetransferDetail', function () {
+    $('.content').load('./template/reward/intetransferDetail.html');
+});
+//积分转赠操作信息
+Router.route('/intetransferOperate', function () {
+    $('.content').load('./template/reward/intetransferOperate.html');
+});
+//积分转换
+Router.route('/inteconver', function () {
+    $('.content').load('./template/reward/inteconver.html');
+});
+//积分转换-操作
+Router.route('/inteconverDetail', function () {
+    $('.content').load('./template/reward/inteconverDetail.html');
+});
+//积分转赠操作信息
+Router.route('/inteconverOperate', function () {
+    $('.content').load('./template/reward/inteconverOperate.html');
+});
+// 积分冻结/解冻复核
+Router.route('/intefreezereview', function () {
+    $('.content').load('./template/reward/intefreezereview.html');
+});
+//积分调整复核
+Router.route('/inteadjustcheck', function () {
+    $('.content').load('./template/reward/inteadjustcheck.html');
+});
+//积分转赠复核
+Router.route('/intetransferreview', function () {
+    $('.content').load('./template/reward/intetransferreview.html');
+});
+//积分转换复核
+Router.route('/inteconverreview', function () {
+    $('.content').load('./template/reward/inteconverreview.html');
+});
+
+//礼品管理
+//礼品信息维护
+Router.route('/lpinfoprotect', function () {
+    $('.content').load('./template/Gift_Management/lpinfoprotect.html');
+});
+//礼品详情
+Router.route('/lpinfoprotect/details', function () {
+    $('.content').load('./template/Gift_Management/lpdetails.html');
+});
+//礼品修改
+Router.route('/lpinfoprotect/modify', function () {
+    $('.content').load('./template/Gift_Management/lpmodify.html');
+});
+//礼品上架
+Router.route('/lpinfoprotect/lpupgoods', function () {
+    $('.content').load('./template/Gift_Management/lpupgoods.html');
+});
+//库存信息维护
+Router.route('/storeinfoprotect', function () {
+    $('.content').load('./template/Gift_Management/storeinfoprotect.html');
+});
+//补充库存
+Router.route('/storeinfoprotect/addstore', function () {
+    $('.content').load('./template/Gift_Management/addstore.html');
+});
+//礼品出库
+Router.route('/storeinfoprotect/lpexport', function () {
+    $('.content').load('./template/Gift_Management/lpexport.html');
+});
+//礼品入库
+Router.route('/storeinfoprotect/lpinport', function () {
+    $('.content').load('./template/Gift_Management/lpinport.html');
+});
+//兑换详情
+Router.route('/storeinfoprotect/duihuan', function () {
+    $('.content').load('./template/Gift_Management/duihuan.html');
+});
+//出库详情
+Router.route('/storeinfoprotect/exportdetail', function () {
+    $('.content').load('./template/Gift_Management/exportdetail.html');
+});
+//礼品审核维护
+Router.route('/lpverifyprotect', function () {
+    $('.content').load('./template/Gift_Management/lpverifyprotect.html');
+});
+//库存审核维护
+Router.route('/storeverifyprotect', function () {
+    $('.content').load('./template/Gift_Management/storeverifyprotect.html');
+});
+
+//客户管理
+//黑白名单维护
+Router.route('/bwlist', function () {
+    $('.content').load('./template/CosManagement/bwlist.html');
+});
+//客户积分查询
+Router.route('/cosjifquery', function () {
+    $('.content').load('./template/CosManagement/cosjifquery.html');
+});
+//积分有效期查询
+Router.route('/findValidDate', function () {
+    $('.content').load('./template/CosManagement/findValidDate.html');
+});
+//积分明细查询
+Router.route('/cosBalanceQueryDetail', function () {
+    $('.content').load('./template/CosManagement/cosBalanceQueryDetail.html');
+});
+//黑白名单审核
+Router.route('/bwlistverify', function () {
+    $('.content').load('./template/CosManagement/bwlistverify.html');
+});
+//清算管理
+//行内清算管理
+Router.route('/intraclear', function () {
+    $('.content').load('./template/ClearManagement/intraclear.html');
+});
+//行内清算管理-明细
+Router.route('/intraclear/details', function () {
+    $('.content').load('./template/ClearManagement/intraclear_details.html');
+});
+//商户清算管理
+Router.route('/businessclear', function () {
+    $('.content').load('./template/ClearManagement/businessclear.html');
+});
+//商户清算管理-明细
+Router.route('/businessclear/details', function () {
+    $('.content').load('./template/ClearManagement/businessclear_details.html');
+});
+//交易管理
+//商城兑换交易明细查询
+Router.route('/extradetails', function () {
+    $('.content').load('./template/TradeManagement/extradetails.html');
+});
+//手工记账
+Router.route('/manualAccount', function () {
+    $('.content').load('./template/TradeManagement/manualAccount.html');
+});
+//线下礼品兑换录入
+Router.route('/manualAccount/enter', function () {
+    $('.content').load('./template/TradeManagement/enter.html');
+});
+//手工记账复核
+Router.route('/manualAccountCheck', function () {
+    $('.content').load('./template/TradeManagement/manualAccountCheck.html');
+});
+<div></div>
+//参数管理
+//数据字典设置
+Router.route('/datadicset', function () {
+    $('.content').load('./template/sysmanage/ParamManagement/datadicset.html');
+});
+//积分转换参数设置
+Router.route('/conversionSet', function () {
+    $('.content').load('./template/sysmanage/ParamManagement/conversionSet.html');
+});
+//修改
+Router.route('/datadicset/modify', function () {
+    $('.content').load('./template/sysmanage/ParamManagement/modify.html');
+});
+//类别项维护
+Router.route('/datadicset/categoryitemprotect', function () {
+    $('.content').load('./template/sysmanage/ParamManagement/categoryitemprotect.html');
+});
+//类别项维护-修改
+Router.route('/datadicset/categoryitemprotect/lmodify', function () {
+    $('.content').load('./template/sysmanage/ParamManagement/lmodify.html');
+});
+//项目管理
+//项目列表
+Router.route('/prolist', function () {
+    $('.content').load('./template/prolist.html');
+});
+//新建项目
+Router.route('/prolist', function () {
+    $('.content').load('./template/prolist.html');
+});
+//基线管理
+Router.route('/baselineManagement', function () {
+    $('.content').load('./template/projectManagement/baselineManagement.html');
+});
+//规则集管理
+Router.route('/ruleSetManagement', function () {
+    $('.content').load('./template/projectManagement/ruleSetManagement.html');
+});
+//规则测试
+Router.route('/ruleTest', function () {
+    $('.content').load('./template/projectManagement/ruleTest.html');
+});
+//规则模拟
+Router.route('/ruleSimulation', function () {
+    $('.content').load('./template/projectManagement/ruleSimulation.html');
+});
+/*积分活动管理*/
+Router.route('/eventManagement', function () {
+    $('.content').load('./template/eventManagement/eventManagement.html');
+});
+/*积分活动管理-规则维护*/
+Router.route('/ruleMaintenance', function () {
+    $('.content').load('./template/eventManagement/ruleMaintenance.html');
+});
+/*积分活动管理-编辑*/
+Router.route('/ruleEdit', function () {
+    $('.content').load('./template/eventManagement/ruleEdit.html');
+});
+/*积分活动审核*/
+Router.route('/eventReview', function () {
+    $('.content').load('./template/eventReview/eventReview.html');
+});
+/*积分活动审核-查看*/
+Router.route('/readReview', function () {
+    $('.content').load('./template/eventReview/readReview.html');
+});
+/*积分活动试算*/
+Router.route('/eventCount', function () {
+    $('.content').load('./template/eventCount/eventCount.html');
+});
+/*积分活动试算*/
+Router.route('/activityParameterSet', function () {
+    $('.content').load('./template/sysmanage/activityParameterSettings.html');
+});
+/*类别项维护*/
+Router.route('/categoryItemMaintenance', function () {
+    $('.content').load('./template/sysmanage/maintenance.html');
+});
+
+/*————————————————报表————————————————————*/
+/*客户积分信息表*/
+Router.route('/customerPointsInformation', function () {
+    $('.content').load('./template/Report/customerPointsInformation.html');
+});
+/*积分交易明细表*/
+Router.route('/departmentPoints', function () {
+    $('.content').load('./template/Report/departmentPoints.html');
+});
+// /*部门积分情况表*/
+// Router.route('/liquidationdetails', function () {
+//     $('.content').load('./template/Report/liquidationdetails.html');
+// });
+/*清算对账汇总表*/
+Router.route('/liquidationSummary', function () {
+    $('.content').load('./template/Report/liquidationSummary.html');
+});
+// /*清算对账明细表*/
+// Router.route('/pointsTransactionDetails', function () {
+//     $('.content').load('./template/Report/pointsTransactionDetails.html');
+// });

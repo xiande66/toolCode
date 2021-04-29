@@ -1,0 +1,1420 @@
+1.我的客户-查询（按名称）
+接口名：我的客户-查询(按名称)
+地址：../client/selectMyClientByName
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户名称/编号	customer_name	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	主键
+客户名称	customer_name	字符	
+客户简称	customer_abbreviation	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+所属行业	customer_industry	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②查询条件为客户客户经理表（tams_cm_customer_manager）中的字段【客户经理】=登录用户的所有客户数据
+③请求参数【客户编号/名称】为模糊查询【客户编号】【客户名称】【英文名称】【客户简称】字段
+④请求参数【客户编号/名称】为空，查询所有数据
+⑤按照创建时间降序排列
+⑥记录日志信息
+⑦要正确返回正常和异常信息
+⑧结果为复数条返回多条数据
+
+2.我的客户-查询（多维度）
+接口名：我的客户-查询（多维度）
+地址：../client/selectMyClientByMulti
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	字符	支持模糊查询
+客户名称	customer_name	字符	支持模糊查询
+客户简称	customer_abbreviation	字符	支持模糊查询
+客户来源	customer_source	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+客户电话	customer_phone	字符	支持模糊查询
+所属行业	customer_industry	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	主键
+客户名称	customer_name	字符	
+客户简称	customer_abbreviation	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+所属行业	customer_industry	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②查询条件为客户客户经理表（tams_cm_customer_manager）中的字段【客户经理】=登录用户的所有客户数据
+③请求参数【客户编号】【客户名称】【客户简称】【客户电话】为模糊查询
+④请求参数为空，查询所有数据
+⑤按照创建时间降序排列
+⑥记录日志信息
+⑦要正确返回信息（异常和正常）
+
+3.我的客户-新增
+接口名：我的客户-新增
+地址：../client/create
+类型：post
+请求参数
+名称	字段名称	类型	说明
+客户名称	customer_name	字符	
+英文名称	customer_name_en	字符	
+客户简称	customer_abbreviation	字符	
+客户来源	customer_source		
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+业务类型	customer_business_type	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+客户地址	customer_address	字符	
+客户邮编	customer_zip_code	字符	
+客户电话	customer_phone	字符	
+所属行业	customer_industry	字符	
+服务模式	customer_service_mode	字符	
+银行户名	customer_bank account_name	字符	
+银行账号	customer_bank account	字符	
+开户银行	customer_opening_bank	字符	
+银行国际编码	customer_bank_international_code	字符	
+收款方公司地址	customer_payee_address 	字符	
+开户银行地址	customer_bank_address	字符	
+汇款备注	customer_remittance_remarks	字符	
+客户简介	customer_introduction	字符	
+备注	customer_remarks	字符	
+
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①默认【客户状态标志】=“正常”
+②记录日志信息
+③要正确返回信息（异常和正常）
+
+4.我的客户-更新
+接口名：我的客户-更新
+地址：../client/update
+类型：put
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	
+客户名称	customer_name	字符	
+英文名称	customer_name_en	字符	
+客户简称	customer_abbreviation	字符	
+客户来源	customer_source		
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+业务类型	customer_business_type	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+客户地址	customer_address	字符	
+客户邮编	customer_zip_code	字符	
+客户电话	customer_phone	字符	
+所属行业	customer_industry	字符	
+服务模式	customer_service_mode	字符	
+银行户名	customer_bank account_name	字符	
+银行账号	customer_bank account	字符	
+开户银行	customer_opening_bank	字符	
+银行国际编码	customer_bank_international_code	字符	
+收款方公司地址	customer_payee_address 	字符	
+开户银行地址	customer_bank_address	字符	
+汇款备注	customer_remittance_remarks	字符	
+客户简介	customer_introduction	字符	
+备注	customer_remarks	字符	
+
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①记录日志信息
+②要正确返回信息（异常和正常）
+
+5.我的客户-删除
+接口名：我的客户-删除
+地址：../client/delete
+类型：delete
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	客户主键ID  必须
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①记录日志信息
+②逻辑删除（【客户状态标志】=“删除”）
+③要正确返回信息（异常和正常）
+
+6.我的客户-查询（按主键）
+接口名：我的客户-查询（按主键）
+地址：../client/selectMyClientById
+类型：put
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	客户主键ID  必须
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	
+客户名称	customer_name	字符	
+英文名称	customer_name_en	字符	
+客户简称	customer_abbreviation	字符	
+客户来源	customer_source	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+业务类型	customer_business_type	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+客户地址	customer_address	字符	
+客户邮编	customer_zip_code	字符	
+客户电话	customer_phone	字符	
+所属行业	customer_industry	字符	
+服务模式	customer_service_mode	字符	
+银行户名	customer_bank account_name	字符	
+银行账号	customer_bank account	字符	
+开户银行	customer_opening_bank	字符	
+银行国际编码	customer_bank_international_code	字符	
+收款方公司地址	customer_payee_address 	字符	
+开户银行地址	customer_bank_address	字符	
+汇款备注	customer_remittance_remarks	字符	
+客户简介	customer_introduction	字符	
+备注	customer_remarks	字符	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明
+①记录日志信息
+②要正确返回信息（异常和正常）
+
+
+7.我的客户-委任（客户经理）
+接口名：我的客户-委任
+地址：../client/appoint
+类型：post
+请求参数
+
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	客户主键ID  必须
+客户经理	cm_managers	字符	多个客户经理名字之间用分号分隔
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①先删除客户客户经理表（tams_cm_customer_manager）中【客户编号】=请求参数的【客户编号】的数据
+②然后客户客户经理表（tams_cm_customer_manager）中新建【客户编号】=请求参数的【客户编号】，【客户经理】==请求参数的【客户经理】的数据（可以多条）
+③记录日志信息
+③要正确返回信息（异常和正常）
+
+
+8.区域客户-查询（按名称）
+接口名：区域客户-查询(按名称)
+地址：../client/selectRegionalClientByName
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户名称/编号	customer_name	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	主键
+客户名称	customer_name	字符	
+客户简称	customer_abbreviation	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+所属行业	customer_industry	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常” 
+②查询条件为客户表（tams_cm_customer）中的字段【客户归属】=登录用户的【业务部门】的所有客户数据
+③请求参数【客户编号/名称】为模糊查询【客户编号】【客户名称】【英文名称】【客户简称】字段
+④请求参数【客户编号/名称】为空，查询符合语言的所有数据
+⑤按照创建时间降序排列
+⑥记录日志信息
+⑦要正确返回正常和异常信息
+⑧结果为复数条返回多条数据
+
+9.区域客户-查询（多维度）
+接口名：我的客户-查询（多维度）
+地址：../client/selectRegionalClientByMulti
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	字符	支持模糊查询
+客户名称	customer_name	字符	支持模糊查询
+客户简称	customer_abbreviation	字符	支持模糊查询
+客户来源	customer_source	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+客户电话	customer_phone	字符	支持模糊查询
+所属行业	customer_industry	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	主键
+客户名称	customer_name	字符	
+客户简称	customer_abbreviation	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+所属行业	customer_industry	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②查询条件为客户表（tams_cm_customer）中的字段【客户归属】=登录用户的【业务部门】的所有客户数据
+③请求参数【客户编号】【客户名称】【客户简称】【客户电话】为模糊查询
+④请求参数为空，查询所有数据
+⑤按照创建时间降序排列
+⑥记录日志信息
+⑦要正确返回信息（异常和正常）
+
+
+10.区域客户-查询（按主键）
+接口名：我的客户-查询（按主键）
+地址：../client/selectRegionalClientById
+类型：put
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	客户主键ID  必须
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	
+客户名称	customer_name	字符	
+英文名称	customer_name_en	字符	
+客户简称	customer_abbreviation	字符	
+客户来源	customer_source		
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+业务类型	customer_business_type	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+客户地址	customer_address	字符	
+客户邮编	customer_zip_code	字符	
+客户电话	customer_phone	字符	
+所属行业	customer_industry	字符	
+服务模式	customer_service_mode	字符	
+银行户名	customer_bank account_name	字符	
+银行账号	customer_bank account	字符	
+开户银行	customer_opening_bank	字符	
+银行国际编码	customer_bank_international_code	字符	
+收款方公司地址	customer_payee_address 	字符	
+开户银行地址	customer_bank_address	字符	
+汇款备注	customer_remittance_remarks	字符	
+客户简介	customer_introduction	字符	
+备注	customer_remarks	字符	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明
+①记录日志信息
+②要正确返回信息（异常和正常）
+
+
+11.全部客户-查询（按名称）
+接口名：全部客户-查询(按名称)
+地址：../client/selectAllClientByName
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户名称/编号	customer_name	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	主键
+客户名称	customer_name	字符	
+客户简称	customer_abbreviation	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+所属行业	customer_industry	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常” 
+②请求参数【客户编号/名称】为模糊查询【客户编号】【客户名称】【英文名称】【客户简称】字段
+③请求参数【客户编号/名称】为空，查询符合语言的所有数据
+④按照创建时间降序排列
+⑤记录日志信息
+⑥要正确返回正常和异常信息
+⑦结果为复数条返回多条数据
+
+12.全部客户-查询（多维度）
+接口名：全部客户-查询（多维度）
+地址：../client/selectAllClientByMulti
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	字符	支持模糊查询
+客户名称	customer_name	字符	支持模糊查询
+客户简称	customer_abbreviation	字符	支持模糊查询
+客户来源	customer_source	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+客户电话	customer_phone	字符	支持模糊查询
+所属行业	customer_industry	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	主键
+客户名称	customer_name	字符	
+客户简称	customer_abbreviation	字符	
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+所属行业	customer_industry	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②请求参数【客户编号】【客户名称】【客户简称】【客户电话】为模糊查询
+③请求参数为空，查询所有数据
+④按照创建时间降序排列
+⑤记录日志信息
+⑥要正确返回信息（异常和正常）
+
+
+13.全部客户-查询（按主键）
+接口名：全部客户-查询（按主键）
+地址：../client/selectAllClientById
+类型：put
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	客户主键ID  必须
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	
+客户名称	customer_name	字符	
+英文名称	customer_name_en	字符	
+客户简称	customer_abbreviation	字符	
+客户来源	customer_source		
+客户类型	customer_type	字符	
+客户状态	customer_condition	字符	
+客户等级	customer_leave	字符	
+签约公司	customer_signing_company	字符	
+客户归属	customer_ownership	字符	
+业务类型	customer_business_type	字符	
+客户经理	cm_manager	字符	
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+客户地址	customer_address	字符	
+客户邮编	customer_zip_code	字符	
+客户电话	customer_phone	字符	
+所属行业	customer_industry	字符	
+服务模式	customer_service_mode	字符	
+银行户名	customer_bank account_name	字符	
+银行账号	customer_bank account	字符	
+开户银行	customer_opening_bank	字符	
+银行国际编码	customer_bank_international_code	字符	
+收款方公司地址	customer_payee_address 	字符	
+开户银行地址	customer_bank_address	字符	
+汇款备注	customer_remittance_remarks	字符	
+客户简介	customer_introduction	字符	
+备注	customer_remarks	字符	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明
+①记录日志信息
+②要正确返回信息（异常和正常）
+
+
+14.我的联系人-查询（按名称）
+接口名：我的联系人-查询(按名称)
+地址：../contacts/selectMyContactsByName
+类型：get
+请求参数
+名称	字段名称	类型	说明
+联系人姓名/中文姓名	contacts_name	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+联系人唯一标识	con_id	数字	
+客户名称	customer_name	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②查询条件为客户客户经理表（tams_cm_customer_manager）中的字段【客户经理】=登录用户的所有客户数据
+③上记①②取出满足客户后查询联系人表【tams_cm_contacts】
+④默认【联系人状态】=“正常”
+⑤请求参数【联系人姓名/中文姓名】为模糊查询
+⑥请求参数【联系人姓名/中文姓名】为空，查询所有数据
+⑦按照创建时间降序排列
+⑧记录日志信息
+⑨要正确返回正常和异常信息
+⑩结果为复数条返回多条数据
+
+
+15.我的联系人-查询（多维度）
+接口名：我的联系人-查询(多维度)
+地址：../contacts/selectMyContactsByMulti
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户名称	customer_name	字符	模糊查询
+联系人姓名	contacts_name	字符	模糊查询
+中文姓名	contacts_name_cn	字符	模糊查询
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	模糊查询
+所属部门	contacts_depart	字符	
+生日	contacts_birthday	字符	
+工作电话	contacts_tel	字符	模糊查询
+移动电话	contacts_mob	字符	模糊查询
+邮箱地址	contacts_mail	字符	模糊查询
+其他联系方式	contacts_other_contact	字符	模糊查询
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+
+响应内容
+名称	字段名称	类型	说明
+联系人唯一标识	con_id		
+客户名称	customer_name	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②查询条件为客户客户经理表（tams_cm_customer_manager）中的字段【客户经理】=登录用户的所有客户数据
+③上记①②取出满足客户后查询联系人表【tams_cm_contacts】
+④默认【联系人状态】=“正常”
+⑤模糊查询参照上记【请求参数】中的说明
+⑥请求参数为空，查询所有数据
+⑦按照创建时间降序排列
+⑧记录日志信息
+⑨要正确返回正常和异常信息
+⑩结果为复数条返回多条数据
+
+
+16.我的联系人-新增
+接口名：我的联系人-新增
+地址：../contacts/create
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+其他联系方式	contacts_other_contact	字符	
+生日	contacts_birthday	字符	
+爱好	contacts_interest	字符	
+备注	contacts_remarks	字符	
+
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【联系人状态】=“正常”
+②记录日志信息
+③要正确返回正常和异常信息
+④结果为复数条返回多条数据
+
+
+17.我的联系人-更新
+接口名：我的联系人-更新
+地址：../contacts/update
+类型：get
+请求参数
+名称	字段名称	类型	说明
+联系人唯一标识	con_id		
+客户编号	cus_id	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+其他联系方式	contacts_other_contact	字符	
+生日	contacts_birthday	字符	
+爱好	contacts_interest	字符	
+备注	contacts_remarks	字符	
+
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①记录日志信息
+②要正确返回正常和异常信息
+③结果为复数条返回多条数据
+
+
+18.我的联系人-删除
+接口名：我的联系人-删除
+地址：../contacts/delete
+类型：get
+请求参数
+名称	字段名称	类型	说明
+联系人唯一标识	con_id	字符	
+
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①记录日志信息
+②逻辑删除（【联系人状态】=“删除”）
+③要正确返回正常和异常信息
+
+
+19.我的联系人-查询（按主键）
+接口名：我的联系人-查询(按主键)
+地址：../contacts/selectMyContactsById
+类型：get
+请求参数
+名称	字段名称	类型	说明
+唯一标识	con_id	字符	
+
+响应内容
+名称	字段名称	类型	说明
+唯一标识	con_id	数字	
+客户编号	cus_id	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+其他联系方式	contacts_other_contact	字符	
+生日	contacts_birthday	字符	
+爱好	contacts_interest	字符	
+备注	contacts_remarks	字符	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①记录日志信息
+②要正确返回正常和异常信息
+
+
+20.区域联系人-查询（按名称）
+接口名：区域联系人-查询(按名称)
+地址：../contacts/selectRegionalContactsByName
+类型：get
+请求参数
+名称	字段名称	类型	说明
+联系人姓名/中文姓名	contacts_name	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+唯一标识	con_id	数字	
+客户编号	cus_id	数字	
+客户名称	customer_name	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②查询条件为客户表（tams_cm_customer）中的字段【客户归属】=登录用户的【业务部门】的所有客户数据
+③上记①②取出满足客户后查询联系人表【tams_cm_contacts】
+④默认【联系人状态】=“正常”
+⑤请求参数【联系人姓名/中文姓名】为模糊查询
+⑥请求参数【联系人姓名/中文姓名】为空，查询所有数据
+⑦按照创建时间降序排列
+⑧记录日志信息
+⑨要正确返回正常和异常信息
+⑩结果为复数条返回多条数据
+
+
+21.区域联系人-查询（多维度）
+接口名：区域联系人-查询(多维度)
+地址：../contacts/selectRegionalContactsByMulti
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户名称	customer_name	字符	模糊查询
+联系人姓名	contacts_name	字符	模糊查询
+中文姓名	contacts_name_cn	字符	模糊查询
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	模糊查询
+所属部门	contacts_depart	字符	
+生日	contacts_birthday	字符	
+工作电话	contacts_tel	字符	模糊查询
+移动电话	contacts_mob	字符	模糊查询
+邮箱地址	contacts_mail	字符	模糊查询
+其他联系方式	contacts_other_contact	字符	模糊查询
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+
+响应内容
+名称	字段名称	类型	说明
+唯一标识	con_id	数字	
+客户编号	cus_id	数字	
+客户名称	customer_name	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②查询条件为客户表（tams_cm_customer）中的字段【客户归属】=登录用户的【业务部门】的所有客户数据
+③上记①②取出满足客户后查询联系人表【tams_cm_contacts】
+④默认【联系人状态】=“正常”
+⑤模糊查询参照上记【请求参数】中的说明
+⑥请求参数为空，查询所有数据
+⑦按照创建时间降序排列
+⑧记录日志信息
+⑨要正确返回正常和异常信息
+⑩结果为复数条返回多条数据
+
+
+22.区域联系人-查询（按主键）
+接口名：区域联系人-查询(按主键)
+地址：../contacts/selectRegionalContactsById
+类型：get
+请求参数
+名称	字段名称	类型	说明
+唯一标识	con_id	字符	
+
+响应内容
+名称	字段名称	类型	说明
+唯一标识	con_id	数字	
+客户编号	cus_id	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+其他联系方式	contacts_other_contact	字符	
+生日	contacts_birthday	字符	
+爱好	contacts_interest	字符	
+备注	contacts_remarks	字符	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①记录日志信息
+②要正确返回正常和异常信息
+
+
+23.全部联系人-查询（按名称）
+接口名：全部联系人-查询(按名称)
+地址：../contacts/selectAllContactsByName
+类型：get
+请求参数
+名称	字段名称	类型	说明
+联系人姓名/中文姓名	contacts_name	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+唯一标识	con_id		
+客户编号	cus_id		
+客户名称	customer_name	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②默认【联系人状态】=“正常”
+③请求参数【联系人姓名/中文姓名】为模糊查询
+④请求参数【联系人姓名/中文姓名】为空，查询所有数据
+⑤按照创建时间降序排列
+⑥记录日志信息
+⑦要正确返回正常和异常信息
+⑧结果为复数条返回多条数据
+
+
+24.全部联系人-查询（多维度）
+接口名：全部联系人-查询(多维度)
+地址：../contacts/selectAllContactsByMulti
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户名称	customer_name	字符	模糊查询
+联系人姓名	contacts_name	字符	模糊查询
+中文姓名	contacts_name_cn	字符	模糊查询
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	模糊查询
+所属部门	contacts_depart	字符	
+生日	contacts_birthday	字符	
+工作电话	contacts_tel	字符	模糊查询
+移动电话	contacts_mob	字符	模糊查询
+邮箱地址	contacts_mail	字符	模糊查询
+其他联系方式	contacts_other_contact	字符	模糊查询
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+
+响应内容
+名称	字段名称	类型	说明
+唯一标识	con_id	数字	
+客户编号	cus_id	数字	
+客户名称	customer_name	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【客户状态标志】=“正常”
+②默认【联系人状态】=“正常”
+③模糊查询参照上记【请求参数】中的说明
+④请求参数为空，查询所有数据
+⑤按照创建时间降序排列
+⑥记录日志信息
+⑦要正确返回正常和异常信息
+⑧结果为复数条返回多条数据
+
+
+25.全部联系人-查询（按主键）
+接口名：全部联系人-查询(按主键)
+地址：../contacts/selectAllContactsById
+类型：get
+请求参数
+名称	字段名称	类型	说明
+唯一标识	con_id	字符	
+
+响应内容
+名称	字段名称	类型	说明
+唯一标识	con_id	数字	
+客户编号	cus_id	数字	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+性别	contacts_sex	字符	
+职位名称	contacts_pos_name	字符	
+业务类型	contacts_bus_type	字符	
+所属部门	contacts_depart	字符	
+默认工作电话	contacts_tel	字符	
+备用工作电话集合	contacts_tel_bak	字符	
+默认移动电话	contacts_mob	字符	
+备用移动电话集合	contacts_mob_bak	字符	
+默认邮箱地址	contacts_mail	字符	
+备用邮箱地址集合	contacts_mail_bak	字符	
+其他联系方式	contacts_other_contact	字符	
+生日	contacts_birthday	字符	
+爱好	contacts_interest	字符	
+备注	contacts_remarks	字符	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①记录日志信息
+②要正确返回正常和异常信息
+
+26.客户交接-查询
+接口名：客户交接-查询
+地址：../client/handoverSelect
+类型：get
+请求参数
+名称	字段名称	类型	说明
+员工编号	user_empno	字符	
+姓名	user_name	字符	
+业务部门	user_business_org	字符	
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	
+每页条数	limitPage	数字	
+响应内容
+名称	字段名称	类型	说明
+员工编号	user_empno	字符	
+姓名	user_name	字符	
+中文姓名	user_name_zh	字符	
+默认邮箱	user_email	字符	
+备用邮箱集合	user_email_bak	字符	
+默认手机号	user_mob	字符	
+备用手机号集合	user_mob_bak	字符	
+默认公司电话	user_tel	字符	
+备用公司电话集合	user_tel_bak	字符	
+其它联系方式	user_contact_other	字符	
+职级	user_level	数字	
+行政部门	user_admin_depart	数字	
+业务部门	user_business_depart	数字	
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①默认【状态】=“启用状态”下的数据
+②业务主表为客户客户经理表（tams_cm_customer_manager）关联系统管理用户表（tams_sm_user）及组织架构表（tams_sm_org）
+③同时模糊查询姓名和中文姓名字段
+④请求参数为空，查询此参数下的所有数据
+⑤需要分页正确分页，不需要分页查询所有符合数据
+⑥记录日志信息
+⑦要正确返回正常和异常信息
+⑧结果为复数条返回多条数据
+
+27.客户交接-查看
+接口名：客户交接-查看
+地址：../client/handoverView
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户经理	customer_manager	字符	员工编号
+响应内容
+名称	字段名称	类型	说明
+客户名称	customer_name	字符	
+客户状态	customer_condition	字符	
+客户归属	customer_ownership	字符	
+联系人姓名	contacts_name	字符	
+中文姓名	contacts_name_cn	字符	
+业务类型	contacts_bus_type	字符	
+职位名称	contacts_pos_name	字符	
+所属部门	contacts_depart	字符	
+返回码	result_code	字符串	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①查询条件为客户客户经理表（tams_cm_customer_manager）中的字段【客户经理】=请求参数中的【客户经理】的所有客户数据
+②查询客户表（tams_cm_customer）中【客户状态标志】=“正常”的数据
+③集合①②查询出此客户经理下所有客户
+④结合③查询联系人表（tams_cm_contacts），查询所有联系人信息
+⑤记录日志信息
+⑥要正确返回正常和异常信息
+⑦结果为复数条返回多条数据
+
+28.客户交接-交接
+接口名：客户交接-交接
+地址：../client/handover
+类型：get
+请求参数
+
+名称	字段名称	类型	说明
+客户编号	ids	数字	多个客户编号之间用分号分隔
+客户经理	cm_managers	字符	多个客户经理名字之间用分号分隔
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①先删除客户客户经理表（tams_cm_customer_manager）中【客户编号】=请求参数的【客户编号】的数据
+②然后客户客户经理表（tams_cm_customer_manager）中新建【客户编号】=请求参数的【客户编号】，【客户经理】==请求参数的【客户经理】的数据（可以多条）
+③记录日志信息
+④要正确返回信息（异常和正常）
+
+
+
+
+客户设置模块
+29.组织架构新增
+接口名：组织架构新增
+地址：../organization/create
+类型：post
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	
+组织名称	org_name	字符	
+组织描述	org_des	字符	
+负责人	org_director	数字	
+上级组织	org_parent_id	数字	
+
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①默认【组织状态】=“正常”
+②【创建时间】为当前时间，【创建人ID】为当前登录人员工编号
+③记录日志信息
+④要正确返回信息（异常和正常）
+
+30.组织架构修改
+接口名：组织架构更新
+地址：../organization/update
+类型：post
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	
+组织架构唯一标识	org_id	数字	
+组织名称	org_name	字符	
+组织描述	org_des	字符	
+负责人	org_director	数字	
+上级组织	org_parent_id	数字	
+
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①记录日志信息
+②【修改时间】为当前时间，【修改人ID】为当前登录人员工编号
+③要正确返回信息（异常和正常）
+
+
+
+31.组织架构删除
+接口名：组织架构删除
+地址：../organization/delete
+类型：delete
+请求参数
+名称	字段名称	类型	说明
+唯一标识	org_id	数字	必填
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①【组织状态】=“删除”
+②组织下有其他组织则（逻辑）级联删除。
+③记录日志信息
+④要正确返回信息（异常和正常）
+
+32.组织架构-客户区域查询
+接口名：组织架构-客户区域查询
+地址：../organization/selectClientRegion
+类型：get
+请求参数
+无
+响应内容
+名称	字段名称	类型	说明
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①条件为客户客户经理表（tams_cm_customer_manager）中的字段【客户经理】=登录用户的所有客户数据
+②默认【客户状态标志】=“正常”
+③结合①②查询客户表（tams_cm_customer）中数据，并以所在国家，所在省，所在市分组
+④记录日志信息
+⑤要正确返回信息（异常和正常）
+
+33.组织架构-客户查询（按区域和名称）
+接口名：组织架构查看
+地址：../organization/selectClientByRegionAndName
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户名称/编号	customer_name	字符	模糊查询
+所在国家	customer_country	字符	
+所在省	customer_province	字符	
+所在市	customer_city	字符	
+
+响应内容
+名称	字段名称	类型	说明
+客户编号	cus_id	数字	
+客户名称	customer_name	字符	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①客户客户经理表（tams_cm_customer_manager）中的字段【客户经理】=登录用户的所有客户数据
+②客户表（tams_cm_customer）中【客户状态标志】=“正常”且满足请求参数的所有客户数据
+③结合①②取交集
+④请求参数可以为空，为空的情况下默认查询所有，非空情况追加参数条件
+⑤记录日志信息
+⑥要正确返回信息（异常和正常）
+
+34.组织架构-查询（按客户）
+接口名：组织架构-查询（按客户）
+地址：../organization/selectByClient
+类型：get
+请求参数
+名称	字段名称	类型	说明
+客户编号	cus_id	字符	
+
+响应内容
+名称	字段名称	类型	说明
+唯一标识	org_id	数字	
+客户编号	cus_id	字符	
+组织名称	org_name	字符	
+组织描述	org_des	字符	
+负责人	org_director	数字	
+上级组织	org_parent_id	数字	
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+接口说明
+①记录日志信息
+②要正确返回信息（异常和正常）
+
+客户日志
+35.客户日志-客户信息日志查询
+接口名：客户日志-客户信息日志查询
+地址：../clientLog/selectInfoLog
+类型：get
+请求参数
+名称	字段名称	类型	说明
+员工编号	user_empno	字符	操作人员
+姓名/中文姓名	user_name	字符	姓名
+操作类型	log_operate_type	数字	操作类型
+
+日志类型	log_type	数字	inf （固定）
+操作内容	log_operate_obj	字符	操作内容
+操作开始时间	log_operate_starttime	日期	操作开始时间YYYYMMDD HH:MM:SS
+操作结束时间	log_operate_endtime	日期	操作结束时间YYYYMMDD HH:MM:SS
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	页码
+每页条数	limitPage	数字	每页条数
+响应内容
+名称	字段名称	类型	说明
+唯一标识	ope_id	数字	
+操作人员	log_operater	字符	员工编号
+姓名	user_name	字符	姓名
+中文姓名	user_name_zh	字符	中文姓名
+操作类型	log_operate_type	数字	操作类型
+操作内容	log_operate_obj	数字	操作内容
+操作时间	log_operate_time	日期	用户操作的时间
+备注	log_remarks	字符	权限日志的备注信息
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①请求参数为空，查询此参数下的所有数据。
+②需要分页正确分页，不需要分页查询所有符合数据。
+③记录日志信息
+④要正确返回正常和异常信息
+⑤结果为复数条返回多条数据
+
+36.客户日志-客户信息日志导出
+接口名：导出系统日志
+地址：../clientLog/exportInfoLog
+类型：get
+请求参数
+名称	字段名称	类型	说明
+操作人员	user_empno	字符	操作人员
+姓名/中文姓名	user_name	字符	姓名
+操作类型	log_operate_type	数字	操作类型
+日志类型	log_type	数字	info（固定）
+操作内容	log_operate_obj	字符	操作内容
+操作开始时间	log_operate_starttime	日期	操作开始时间YYYYMMDD HH:MM:SS
+操作结束时间	log_operate_endtime	日期	操作结束时间YYYYMMDD HH:MM:SS
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①记录日志信息
+②要正确返回正常和异常信息
+③导出文件参照如下文件
+
+
+37.客户日志-客户设置日志查询
+接口名：客户日志-客户设置日志查询
+地址：../clientLog/selectSetLog
+类型：get
+请求参数
+名称	字段名称	类型	说明
+操作人员	user_empno	字符	操作人员
+姓名/中文姓名	user_name	字符	姓名
+操作类型	log_operate_type	数字	操作类型
+日志类型	log_type	数字	set(固定)
+操作内容	log_operate_obj	字符	操作内容
+操作开始时间	log_operate_starttime	日期	操作开始时间YYYYMMDD HH:MM:SS
+操作结束时间	log_operate_endtime	日期	操作结束时间YYYYMMDD HH:MM:SS
+排序	sort	字符	默认按照创建时间倒序
+列排序（画面中对列标题的排序切换）
+页码	page	数字	页码
+每页条数	limitPage	数字	每页条数
+响应内容
+名称	字段名称	类型	说明
+唯一标识	ope_id	数字	
+操作人员	user_empno	字符	员工编号
+姓名	user_name	字符	姓名
+中文姓名	user_name_zh	字符	中文姓名
+操作类型	log_operate_type	数字	操作类型
+操作内容	log_operate_obj	数字	操作内容
+操作时间	log_operate_time	日期	用户操作的时间
+备注	log_remarks	字符	权限日志的备注信息
+总条数	allcount	字符	分页的情况下赋值
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①请求参数为空，查询此参数下的所有数据。
+②需要分页正确分页，不需要分页查询所有符合数据。
+③记录日志信息
+④要正确返回正常和异常信息
+⑤结果为复数条返回多条数据
+
+38.客户日志-客户设置日志导出
+接口名：导出权限日志
+地址：../clientLog/exportSetLog
+类型：get
+请求参数
+名称	字段名称	类型	说明
+操作人员	user_empno	字符	操作人员
+姓名/中文姓名	user_name	字符	姓名
+操作类型	log_operate_type	数字	操作类型
+日志类型	log_type	数字	set(固定)
+操作内容	log_operate_obj	字符	操作内容
+操作开始时间	log_operate_starttime	日期	操作开始时间YYYYMMDD HH:MM:SS
+操作结束时间	log_operate_endtime	日期	操作结束时间YYYYMMDD HH:MM:SS
+响应内容
+名称	字段名称	类型	说明
+返回码	result_code	字符	
+返回信息	message	字符	
+异常信息	exception	字符	
+
+接口说明	
+①记录日志信息
+②要正确返回正常和异常信息
+③导出文件参照如下文件
