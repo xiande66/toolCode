@@ -1,0 +1,5 @@
+唯一标识	id
+职位名称	posName
+职位类别	posClass
+职位描述	posDesc
+修改人	posUpdateUser

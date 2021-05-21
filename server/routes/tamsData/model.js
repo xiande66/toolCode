@@ -1,7 +1,7 @@
 export function $name(data) {  /* $des */
     return request({
-        url: "$url",
-        method: "$type",
+        url: '$url',
+        method: '$type',
         data
     })
 }

@@ -25,9 +25,9 @@ const appendText = (arr, url, type) => {
         content.zh.forEach((data, i) => {
             console.log(content.en);
             if (type == 'json') {
-                zh = `"${filters(content.en[i])}":"${data}",\n`
-                tw = `"${filters(content.en[i])}":"${content.tw[i]}",\n`
-                en = `"${filters(content.en[i])}":"${content.en[i]}",\n`
+                zh = `${filters(content.en[i])}:'${data}',\n`
+                tw = `${filters(content.en[i])}:'${content.tw[i]}',\n`
+                en = `${filters(content.en[i])}:'${content.en[i]}',\n`
             } else {
                 zh = `${filters(content.en[i])} = ${data}\n`
                 tw = `${filters(content.en[i])} = ${content.tw[i]}\n`

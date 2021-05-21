@@ -1,6 +1,6 @@
 export function $name() { /* $des */
     return request({
-        url: "$url",
-        method: "$type"
+        url: '$url',
+        method: '$type'
     })
 }

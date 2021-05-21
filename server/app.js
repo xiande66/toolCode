@@ -13,7 +13,7 @@ var QQRouter = require('./routes/QQ/index');
 
 var app = express();
 
-app.use(cors()) /*前端跨域解决*/
+// app.use(cors()) /*前端跨域解决*/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
